@@ -1,0 +1,41 @@
+.SwiperArrow
+	display flex
+	justify-content center
+	align-items center
+	width 18px
+	height 30px
+	outline none
+	cursor pointer
+	
+	@media $mdPlus
+		width 51px
+		height 50px
+		background $red
+		transition .3s ease-in-out
+	
+	&:hover
+		@media $mdPlus
+			background $redHover
+
+	&-prev		
+		@media $mdPlus
+			padding-right 5px
+
+	&-next		
+		@media $mdPlus
+			padding-left 5px
+		
+			&:before
+				content ""
+				position absolute
+				top 0
+				bottom 0
+				left -1px
+				width 2px
+				height 22px
+				margin auto
+				background $white
+	
+	&-pageAbout
+		@media $mdPlus
+			display none

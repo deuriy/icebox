@@ -1,0 +1,85 @@
+extends layout
+block vars
+	- var title = "Studio";
+	- var wrapperModifiers = "Wrapper-basePage Wrapper-pageStudio";
+	- var mainContentModifiers = "MainContent-basePage MainContent-pageStudio";
+block content
+	.BasePage.BasePage-pageStudio
+		.Container.BasePage_container
+			.Columns
+				.Columns_col.BasePage_col.BasePage_col-left
+					h1.PageTitle.TitleSep.BasePage_title #{title}
+					.Subtitle.BasePage_subtitle.
+						До 15 классов каждый день #[br.hidden-xs.hidden-sm]без абонемента.
+					ul.List.BasePage_list
+						li.List_item - Cycle LesMills
+						li.List_item - Аэройога
+						li.List_item - Бокс
+						li.List_item - Муайтай
+						li.List_item - Грэпплинг/BJJ
+						li.List_item.List_item-label И другие дисциплины
+					.BasePage_text
+						p.
+							Лучшее оборудование от Rogue, Concept2,Assault, Keiser.
+					.MobileApp.BasePage_mobileApp.hidden-xs.hidden-sm
+						.MobileApp_title.TitleSep.TitleSep-top.
+							Запись на занятия через мобильное приложение
+						ul.MobileApp_icons
+							li.MobileApp_icon
+								a(href="http://play.google.com", target="_blank", title="Перейти в Google Play")
+									include includes/svg/SvgIco/google_play
+							li.MobileApp_icon
+								a(href="https://www.apple.com/ios/app-store/", target="_blank", title="Перейти в App Store")
+									include includes/svg/SvgIco/app_store
+						.MobileApp_text Первое занятие бесплатно
+				.Columns_col.BasePage_col.BasePage_col-right
+					.BasePage_swiper.hidden-mdPlus
+						.swiper-container.Swiper.Swiper-basePage
+							.swiper-wrapper.Swiper_wrapper
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/studio.png')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_2.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_3.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_4.jpg')")
+							.Swiper_pagination
+							.SwiperArrow.SwiperArrow-prev.BasePage_swiperArrow.BasePage_swiperArrow-prev.Swiper_prev
+								include includes/svg/SvgIco/slider_prev
+							.SwiperArrow.SwiperArrow-next.BasePage_swiperArrow.BasePage_swiperArrow-next.Swiper_next
+								include includes/svg/SvgIco/slider_next
+					.BasePage_swiper.hidden-smMinus
+						.swiper-container.Swiper.Swiper-basePage
+							.swiper-wrapper.Swiper_wrapper
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/studio.png')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/training.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_3.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_4.jpg')")
+							.Swiper_pagination
+							.SwiperArrow.SwiperArrow-prev.BasePage_swiperArrow.BasePage_swiperArrow-prev.Swiper_prev
+								include includes/svg/SvgIco/slider_prev
+							.SwiperArrow.SwiperArrow-next.BasePage_swiperArrow.BasePage_swiperArrow-next.Swiper_next
+								include includes/svg/SvgIco/slider_next
+					.MobileApp.BasePage_mobileApp.hidden-mdPlus
+						.MobileApp_title.TitleSep.TitleSep-top.
+							Запись на занятия через мобильное приложение
+						ul.MobileApp_icons
+							li.MobileApp_icon
+								a(href="http://play.google.com", target="_blank", title="Перейти в Google Play")
+									include includes/svg/SvgIco/google_play
+							li.MobileApp_icon
+								a(href="https://www.apple.com/ios/app-store/", target="_blank", title="Перейти в App Store")
+									include includes/svg/SvgIco/app_store
+						.MobileApp_text Первое занятие бесплатно
+					
+block page_bottom
+	script(src="/js/basepage.js")

@@ -1,0 +1,21 @@
+.FormText
+	height 34px
+	background transparent
+	border none
+	border-bottom 1px solid #c5c5c5
+	outline none
+	font-size 16px
+	color #C7C7C7
+	transition .2s ease-in-out
+	
+	+placeholder()
+		color #C7C7C7
+		opacity 1
+		transition .2s ease-in-out
+	
+	&.error
+		border-bottom-color $red2
+		color $red2
+		
+		+placeholder()
+			color $red2

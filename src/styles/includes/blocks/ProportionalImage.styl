@@ -1,0 +1,69 @@
+.ProportionalImage
+	background-size cover
+	
+	@media $mdPlus
+		background-position 49.9% 0
+	
+	&:after
+		content ""
+		display block
+		padding-top 66.5%
+		
+		@media $mdPlus
+			padding-top 114%
+	
+	&-actionBlock
+		// border 2px solid $red2
+		// background-position 45.5% 13%
+		// background-size 177%
+		
+		@media $smPlus
+			// border-width 1px
+			// background-position 0 0
+			// background-size 88%
+		
+		@media $mdPlus
+			// background-size 100%
+		
+		&:after
+			padding-top 92%
+			
+			@media $smPlus
+				padding-top 89.5%
+			
+			@media $mdPlus
+				padding-top 113.8%
+	
+	&-personalTraining
+		border 2px solid $red2
+		
+		@media $smPlus
+			border-width 1px
+	
+	&-basePage
+		@media $mdPlus
+			background-position 0 0
+			// background-position 9% 0
+			
+		&:after
+			@media $mdPlus
+				padding-top 113.6%
+	
+	&-trainersPage
+		@media $sm
+			background-position 3px 5.3%
+			
+		&:after
+			padding-top 149.4%
+			
+			@media $sm
+				padding-top 77.1%
+	
+	&-pageAbout
+		@media $mdPlus
+			background-position 4.6% -2px
+			background-size 137.4%
+			
+		&:after
+			@media $mdPlus
+				padding-top 90.468%

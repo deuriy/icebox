@@ -1,0 +1,15 @@
+.DS_Store
+*.log
+build
+*.node
+components
+coverage
+node_modules
+*.orig
+.idea
+validator-out
+dist
+sandbox
+gulp.1
+package-lock.json
+**/*.mp4

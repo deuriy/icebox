@@ -1,0 +1,114 @@
+extends layout
+block vars
+	- var title = "Главная страница";
+	- var wrapperModifiers = "Wrapper-frontpage";
+	- var mainContentModifiers = "MainContent-frontpage";
+block content
+	.FrontpageSection
+		.PageBg.PageBg-frontpage.FrontpageSection_pageBg
+		.Container
+			h1.Heading1.Heading1-large.FrontpageSection_title.
+				Icebox #[br]Fitness
+			.Explanation.FrontpageSection_explanation.
+				В #[span.Red IceBox Fitness] мы помогаем людям любого возраста СТАТЬ ЛУЧШЕЙ ВЕРСИЕЙ СЕБЯ в атмосфере дружеского общения, юмора и взаимной поддержки. Весь спектр занятий от тренировок в свое удовольствие до подготовки к соревнованиям.
+			.InfoBlocks.FrontpageSection_stock
+				h2.Heading2.InfoBlocks_title Акции
+				.swiper-container.Swiper.Swiper-infoBlock.FrontpageSection_swiper.FrontpageSection_swiper-infoBlock
+					.swiper-wrapper.Swiper_wrapper
+						.swiper-slide.Swiper_slide
+							.InfoBlock
+								.InfoBlock_img
+									a(href="/action.html", target="_blank", title="Делайте подарки себе и своим близким!")
+										include includes/svg/SvgIco/gifts
+								h3.InfoBlock_caption
+									a(href="/action.html", target="_blank", title="Делайте подарки себе и своим близким!").
+										Делайте подарки себе #[br]и своим близким!
+						.swiper-slide.Swiper_slide
+							.InfoBlock
+								.InfoBlock_img
+									a(href="/action.html", target="_blank", title="Персональная тренировка от 2 000 р.")
+										include includes/svg/SvgIco/personal_training
+								h3.InfoBlock_caption
+									a(href="/action.html", target="_blank", title="Персональная тренировка от 2 000 р.").
+										Персональная #[br]тренировка от 2 000 р.
+						.swiper-slide.Swiper_slide
+							.InfoBlock
+								.InfoBlock_img
+									a(href="/action.html", target="_blank", title="Бесплатные занятия в студии icebox fitness.")
+										include includes/svg/SvgIco/free_trainings
+								h3.InfoBlock_caption
+									a(href="/action.html", target="_blank", title="Бесплатные занятия в студии icebox fitness.").
+										Бесплатные занятия #[br]в студии icebox fitness.
+					.SwiperArrow.SwiperArrow-prev.Swiper_prev
+						include includes/svg/SvgIco/slider_prev
+					.SwiperArrow.SwiperArrow-next.Swiper_next
+						include includes/svg/SvgIco/slider_next
+			.FrontpageSection_swiperAll.SwiperAll.SwiperAll-arrowsMiddleMd.SwiperAll-frontpage
+				.swiper-container.Swiper.Swiper-fullWidthDesktop.Swiper-paginationCenterDesktop.Swiper-frontpage.FrontpageSection_swiper
+					.swiper-wrapper.Swiper_wrapper
+						.swiper-slide.Swiper_slide
+							img(src="img/fitness_3.jpg", alt="")
+						.swiper-slide.Swiper_slide
+							img(src="img/fitness.jpg", alt="")
+						.swiper-slide.Swiper_slide
+							img(src="img/fitness_4.jpg", alt="")
+						.swiper-slide.Swiper_slide
+							img(src="img/bathroom.jpg", alt="")
+						.swiper-slide.Swiper_slide
+							img(src="img/crossfit.jpg", alt="")
+					.Swiper_pagination
+				.SwiperArrow.SwiperArrow-prev.SwiperAll_prev
+					include includes/svg/SvgIco/slider_prev
+				.SwiperArrow.SwiperArrow-next.SwiperAll_next
+					include includes/svg/SvgIco/slider_next
+			.InfoBlocks.InfoBlocks-trainings.FrontpageSection_trainings
+				h2.Heading2.InfoBlocks_title Занятия
+				.swiper-container.Swiper.Swiper-infoBlock.Swiper-infoBlockLarge.FrontpageSection_swiper.FrontpageSection_swiper-infoBlock
+					.swiper-wrapper.Swiper_wrapper
+						.swiper-slide.Swiper_slide
+							.InfoBlock.InfoBlock-large
+								.InfoBlock_img
+									a(href="/bathroom.html", target="_blank", title="Бассейн")
+										include includes/svg/SvgIco/bathroom
+								h3.InfoBlock_caption
+									a(href="/bathroom.html", target="_blank", title="Бассейн").
+										Бассейн
+						.swiper-slide.Swiper_slide
+							.InfoBlock.InfoBlock-large
+								.InfoBlock_img
+									a(href="/studio.html", target="_blank", title="Studio")
+										include includes/svg/SvgIco/studio
+								h3.InfoBlock_caption
+									a(href="/studio.html", target="_blank", title="Studio").
+										Studio
+						.swiper-slide.Swiper_slide
+							.InfoBlock.InfoBlock-large
+								.InfoBlock_img
+									a(href="/fitness.html", target="_blank", title="Фитнес")
+										include includes/svg/SvgIco/fitness
+								h3.InfoBlock_caption
+									a(href="/fitness.html", target="_blank", title="Фитнес").
+										Фитнес
+						.swiper-slide.Swiper_slide
+							.InfoBlock.InfoBlock-large
+								.InfoBlock_img
+									a(href="/crossfit.html", target="_blank", title="CrossFit")
+										include includes/svg/SvgIco/crossfit
+								h3.InfoBlock_caption
+									a(href="/crossfit.html", target="_blank", title="CrossFit").
+										CrossFit
+						.swiper-slide.Swiper_slide
+							.InfoBlock.InfoBlock-large
+								.InfoBlock_img
+									a(href="/children.html", target="_blank", title="Детям")
+										include includes/svg/SvgIco/children
+								h3.InfoBlock_caption
+									a(href="/children.html", target="_blank", title="Детям").
+										Детям
+					.SwiperArrow.SwiperArrow-prev.Swiper_prev
+						include includes/svg/SvgIco/slider_prev
+					.SwiperArrow.SwiperArrow-next.Swiper_next
+						include includes/svg/SvgIco/slider_next
+		include includes/blocks/TrialLessonSection
+block page_bottom
+	script(src="/js/index.js")

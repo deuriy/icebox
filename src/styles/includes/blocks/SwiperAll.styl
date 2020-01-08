@@ -1,0 +1,42 @@
+.SwiperAll
+	position relative
+	
+	&_prev, &_next
+		position absolute
+		z-index 10
+		top -29px
+		bottom 0
+		margin auto
+	
+	&_prev
+		left -20px
+	
+	&_next
+		right -20px
+	
+	&-arrowsMiddleMd
+		@media $mdPlus
+			.SwiperAll_prev, .SwiperAll_next
+				top -42px
+			
+			.SwiperAll_prev
+				left -25px
+			
+			.SwiperAll_next
+				right -25px
+				left auto
+				
+				&:before
+					display none
+					
+	&-frontpage		
+		.Swiper_pagination
+			@media $xs
+				margin-top 17px
+			
+		.Swiper_paginationItem
+			&:not(.Swiper_paginationItem-active)
+				background #BDBDBD
+				
+				&:hover
+					background $red

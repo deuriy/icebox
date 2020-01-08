@@ -1,0 +1,115 @@
+.PageBg
+	position relative
+	padding-top 436px
+	background url('../img/bg_page_about.jpg') 55% 0 / auto 435px no-repeat
+	
+	@media $smPlus
+		padding-top 67%
+		background-position -4px 0
+		background-size auto 100%
+	
+	@media $mdPlus
+		padding-top 51.288%
+		background-position -10px 0
+		background-size 101%
+	
+	&:before
+		content ""
+		position absolute
+		bottom -56px
+		width 100%
+		padding-top 206px
+		background url('../img/ribbons_frontpage.svg') 30.3% 0 / auto 100% no-repeat
+		
+		@media $smPlus
+			bottom -74px
+			padding-top 210px
+			background-position 31% 0
+		
+		@media $mdPlus
+			bottom 13.5%
+			padding-top 23.1214%
+			background-position 75.8% 0
+			background-size 119% auto
+	
+	&:after
+		@media $mdPlus
+			content ""
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+			padding-top 39.78%
+			background-image linear-gradient(to top, #1d1d1d, rgba(29, 29, 29, 0))
+			pointer-events none
+	
+	&-frontpage
+		background-image url('../img/bg_frontpage.jpg')
+		
+		@media $xs
+			padding-top 416px
+			background-position 27% 0
+			background-size auto 416px
+		
+		@media $sm
+			padding-top 100.522%
+			background-position 38.5% 0
+			background-size auto 93.7%
+		
+		@media $mdPlus
+			padding-top 64.793%
+		
+		&:before
+			bottom -80px
+			
+			@media $sm
+				bottom 100px
+				padding-top 335px
+				background-position 45.5% 0
+			
+			@media $md
+				bottom 80px
+			
+			@media $lgPlus
+				bottom 214px
+		
+		&:after
+			@media $sm
+				content ""
+				position absolute
+				bottom 48px
+				left 0
+				width 100%
+				height 382px
+				background-image linear-gradient(to top, #1d1d1d, rgba(29, 29, 29, 0))
+				pointer-events none
+			
+			@media $mdPlus
+				height auto
+				padding-top 34.367%
+	
+	&-trainersPage
+		@media $smMinus
+			padding-top 0
+			background none
+		
+		@media $mdPlus
+			background url('../img/bg_trainers_page.jpg') 50% 0 / auto 100% no-repeat
+			
+		&:before
+			@media $smMinus
+				display none
+			
+			@media $md
+				bottom 7%
+		
+		&:after
+			@media $lgPlus
+				content ""
+				position absolute
+				bottom 0
+				left 0
+				width 100%
+				height 757px
+				background-image linear-gradient(to top, #1d1d1d, rgba(29, 29, 29, 0))
+				pointer-events none

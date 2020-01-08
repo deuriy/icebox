@@ -1,0 +1,27 @@
+font-face(fontFamily, fontUrl, fontWeight = normal, fontStyle = normal)
+	@font-face
+		font-family: fontFamily
+		src: url(fontUrl + '.eot')
+		src: url(fontUrl + '.eot?#iefix') format('embedded-opentype'),url(fontUrl + '.woff2') format('woff2'), url(fontUrl + '.woff') format('woff'),url(fontUrl + '.ttf') format('truetype'), url(fontUrl + '.svg#DINPro-Light') format('svg')
+		font-weight: fontWeight
+		font-style: fontStyle
+
+transform-rotate(deg)
+	-webkit-transform rotate(deg * 1deg)
+	-moz-transform rotate(deg * 1deg)
+	-ms-transform rotate(deg * 1deg)
+	-o-transform rotate(deg * 1deg)
+	transform rotate(deg * 1deg)
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+
+	&::-moz-placeholder
+		{block}
+
+	&:-moz-placeholder
+		{block}
+
+	&:-ms-input-placeholder
+		{block}

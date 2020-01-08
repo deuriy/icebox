@@ -1,0 +1,63 @@
+extends layout
+block vars
+	- var title = "Бассейн";
+	- var wrapperModifiers = "Wrapper-basePage Wrapper-bathroom";
+	- var mainContentModifiers = "MainContent-basePage MainContent-bathroom";
+block content
+	.BasePage.BasePage-pageBathroom
+		.Container.BasePage_container
+			.Columns
+				.Columns_col.BasePage_col.BasePage_col-left
+					h1.PageTitle.TitleSep.BasePage_title #{title}
+					.Subtitle.BasePage_subtitle.
+						20 м бассейн с 4 дорожками Icebox Aqua #[span.hidden-sm &nbsp;]ждет атлетов #[br.hidden-sm]с 5 до 100 лет для свободного плавания, персоналок #[br.hidden-xs.hidden-smPlus]и занятий #[br.hidden-smPlus]в классах:
+					ul.List.BasePage_list
+						li.List_item - Плавание для начинающих
+						li.List_item - Аква-аэробика
+						li.List_item - Crossfit Aqua
+						li.List_item - Водное поло
+					.BasePage_text
+						p.
+							Обучим юных атлетов плавать и спасем тонущих любого возраста.
+						p.
+							Для вышедших на сушу - зоны гимнастики, растяжки и отдыха. Восстановление сил с помощью сауны/хамама, массажа, фруктовых соков и спортивных коктейлей.
+				.Columns_col.BasePage_col.BasePage_col-right
+					.BasePage_swiper.hidden-mdPlus
+						.swiper-container.Swiper.Swiper-basePage
+							.swiper-wrapper.Swiper_wrapper
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/bathroom.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_2.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_3.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_4.jpg')")
+							.Swiper_pagination
+							.SwiperArrow.SwiperArrow-prev.BasePage_swiperArrow.BasePage_swiperArrow-prev.Swiper_prev
+								include includes/svg/SvgIco/slider_prev
+							.SwiperArrow.SwiperArrow-next.BasePage_swiperArrow.BasePage_swiperArrow-next.Swiper_next
+								include includes/svg/SvgIco/slider_next
+					.BasePage_swiper.hidden-smMinus
+						.swiper-container.Swiper.Swiper-basePage
+							.swiper-wrapper.Swiper_wrapper
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/bathroom.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/training.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_3.jpg')")
+								.swiper-slide.Swiper_slide
+									.ProportionalImage.ProportionalImage-basePage(style="background-image: url('img/fitness_4.jpg')")
+							.Swiper_pagination
+							.SwiperArrow.SwiperArrow-prev.BasePage_swiperArrow.BasePage_swiperArrow-prev.Swiper_prev
+								include includes/svg/SvgIco/slider_prev
+							.SwiperArrow.SwiperArrow-next.BasePage_swiperArrow.BasePage_swiperArrow-next.Swiper_next
+								include includes/svg/SvgIco/slider_next
+					
+block page_bottom
+	script(src="/js/basepage.js")

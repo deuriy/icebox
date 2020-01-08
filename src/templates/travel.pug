@@ -1,0 +1,32 @@
+extends layout
+block vars
+	- var title = "Проезд";
+	- var mainContentModifiers = "MainContent-pageTravel";
+block content
+	.Travel
+		.Container
+			h1.Heading1.Travel_title Проезд
+			.Travel_text.
+				Найдите БЦ Рига-Ленд на Новой Риге в навигаторах #[a.Travel_link(href="http://yandex.ru", target="_blank") Яндекс] или #[a.Travel_link(href="http://google.com", target="_blank") Google] #[br.hidden-sm.hidden-mdPlus]и следуйте #[br.hidden-xs.hidden-mdPlus]их указаниям.
+		.Map.Travel_map#Map
+		.ParkingScheme.Travel_parkingScheme
+			.Container
+				.Heading3.ParkingScheme_title Схема Рига Лэнд
+				.ParkingScheme_subtitle 3 Варианта парковки:
+				.ParkingScheme_img.Travel_parkingSchemeImg
+					button(data-src="img/parking_scheme2.png").ZoomImg.ParkingScheme_zoomImg.hidden-sm.hidden-mdPlus
+						include includes/svg/SvgIco/zoom
+				.ParkingScheme_text.
+					- На территории БЦ перед клубом &nbsp;по цене 100р за вьезд или 500 рублей в месяц, #[br.hidden-xs.hidden-sm]покупается в клубе. Первый вьезд по предварительной заявке через самый #[br.hidden-xs.hidden-sm]правый шлагбаум у поста охраны.
+		.Container
+			.Travel_form
+				include includes/blocks/Form-passRequest
+			ul.List.List-pageTravel.Travel_list
+				li.List_item.
+					- &nbsp;Платная парковка с северной стороны бизнес центра рядом с залами Crossfit и #[br.hidden-xs.hidden-sm]Studio. &nbsp;Для парковки не требуется предварительная заявка, она оплачивается по #[br.hidden-xs.hidden-sm]парковочному талону на месте: первый час бесплатно, второй и последующие 50р.
+				li.List_item.
+					- &nbsp;бесплатная парковка по-соседству &nbsp;в Твоем Доме.
+
+block page_bottom
+	script(src="/js/travel.js")
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrfFAsoPAzPxsWXvA7K1-HKktylvxM94o&callback=initMap")

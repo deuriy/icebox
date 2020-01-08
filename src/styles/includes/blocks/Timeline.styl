@@ -1,0 +1,69 @@
+.Timeline
+	@media $xs
+		padding-left 2px
+	
+	&_list
+		display flex
+		justify-content space-between
+		height 2px
+		background $gray2
+	
+	&_item
+		&:first-child
+			margin-left -10px
+			
+			@media $smPlus
+				margin-left -12px
+		
+		&:last-child
+			margin-right -10px
+			
+			@media $smPlus
+				margin-right -13px
+			
+		&-previous, &-previousHover, &-current, &:hover
+			.Timeline_circle
+				background $red3
+		
+		&-current, &:hover
+			.Timeline_circle
+				box-shadow 0 0 0 6px rgba(237, 28, 36, 0.3)
+		
+		&-previousHover
+			.Timeline_circle
+				box-shadow none
+		
+		&-nextHover
+			.Timeline_circle
+				background $gray2
+				box-shadow none
+	
+	&_link
+		position relative
+		display block
+		width 36px
+		margin-top 15px
+		font-size 15px
+		text-align center
+		
+	&_circle
+		display block
+		width 18px
+		height 18px
+		margin-top -23px
+		margin-bottom 5px
+		margin-right auto
+		margin-left auto
+		border-radius 50%
+		background $gray2
+		transition all .36s linear
+		
+		@media $smPlus
+			margin-bottom 13px
+	
+	&_fillLine
+		width 0%
+		max-width 100%
+		height 2px
+		margin-top -2px
+		background $red3

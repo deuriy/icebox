@@ -1,0 +1,9 @@
+header.Header
+	.Container.Header_container
+		include MenuHamburger
+		include MobileNavigation
+		a(href="/", title="На главную").Header_logo
+			img(src="img/logo.svg", alt="Логотип").Header_logoImg
+		include MainMenu
+		a(href="tel:+79265200800", title="Позвонить").Header_call
+			include ../svg/SvgIco/call_icon

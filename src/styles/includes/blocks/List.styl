@@ -1,0 +1,72 @@
+.List	
+	&_item
+		font-weight normal
+		font-size 18px
+		line-height 1.11
+		text-transform uppercase
+		color $white
+		
+		@media $smPlus
+			line-height 2.22
+		
+		@media $mdPlus
+			font-size 30px
+			line-height 1.33
+		
+		&:not(:last-child)
+			margin-bottom 11px
+			
+			@media $smPlus
+				margin-bottom 1px
+		
+		&-label
+			margin-top 13px
+			
+			@media $smPlus
+				margin-top 6px
+	
+	&-actionBlock
+		.List_item
+			font-size 16px
+			line-height 1.5
+			text-transform none
+			
+			&:not(:last-child)
+				margin-bottom 10px
+				
+				@media $smPlus
+					margin-bottom 0
+	
+	&-pageTravel
+		.List_item
+			font-size 16px
+			line-height normal
+			text-transform none
+			
+			&:not(:last-child)
+				margin-bottom 31px
+				
+				@media $mdPlus
+					margin-bottom 25px
+	
+	&-pageAboutMoney
+		.List_item
+			font-size 16px
+			line-height normal
+			text-transform none
+			
+			@media $smPlus
+				font-size 30px
+				line-height 1.4
+			
+			@media $mdPlus
+				line-height 1.57
+			
+			&:not(:last-child)
+				margin-bottom 10px
+				
+				@media $smPlus
+					margin-bottom 14px
+				
+				@media $mdPlus
+					margin-bottom 1px

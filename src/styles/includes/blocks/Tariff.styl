@@ -1,0 +1,55 @@
+.Tariff
+	position relative
+	padding 5px 0 14px 1px
+	border-bottom 1px solid $gray2
+	line-height normal
+	
+	@media $smPlus
+		padding-top 6px
+		padding-bottom 13px
+	
+	&_name-and-price
+		display flex
+		justify-content space-between
+		align-items flex-end
+		margin-bottom 7px
+	
+	&_name
+		font-weight 500
+		font-size 20px
+		text-transform uppercase
+	
+	&_price
+		font-weight 500
+		font-size 28px
+	
+	&_description
+		font-size 15px
+	
+	&-short
+		display flex
+		justify-content space-between
+		align-items center
+		padding-bottom 9px
+		border-bottom none
+		
+		.Tariff_description
+			flex-basis 70%
+	
+	&-highlighted
+		&:before
+			content ""
+			position absolute
+			z-index -1
+			top 0
+			right -20px
+			bottom 0
+			left -20px
+			transition .25s ease-in-out
+			
+			@media $mdPlus
+				right -25px
+				left -25px
+		
+		&:hover:before
+			background #2F2F2F

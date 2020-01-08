@@ -1,0 +1,33 @@
+.Wrapper
+	display flex
+	flex-direction column
+	min-height 100%
+	
+	&-actionPage
+		@media $mdPlus
+			background url('../img/ribbons.svg') 26.6% 85px no-repeat
+	
+	&-basePage
+		background url('../img/ribbons.svg') 40.8% 89px / auto 327px no-repeat
+		
+		@media $smPlus
+			background-position 52.4% 71px
+			background-size 287%
+		
+		@media $mdPlus
+			background-position 41.9% 86px
+			background-size 190.2%
+	
+	&-trainersPage
+		background url('../img/ribbons.svg') 58% 251px / auto 216px no-repeat
+		
+		@media $smPlus
+			background-position 48% 152px
+			background-size auto 218px
+		
+		@media $mdPlus
+			background none
+	
+	&-pageAboutMoney
+		@media $mdPlus
+			background url('../img/ribbons.svg') 43% 138px / auto 897px no-repeat

@@ -1,0 +1,148 @@
+.BasePage
+	&_container
+		padding-right 16px
+	
+	&_col
+		&-left
+			@media $mdPlus
+				padding-right 70px
+	
+	&_title
+		margin-bottom 7px
+		
+		@media $smPlus
+			margin-bottom 20px
+		
+		@media $mdPlus
+			margin-bottom 10px
+		
+	&_subtitle
+		margin-bottom 20px
+	
+	&_list
+		margin-top 20px
+		margin-right -4px
+		margin-bottom 34px
+		
+		@media $smPlus
+			margin-bottom 32px
+		
+		@media $mdPlus
+			margin-bottom 37px
+	
+	&_caption
+		margin-bottom 34px
+		
+		@media $smPlus
+			margin-bottom 32px
+	
+	&_swiper
+		margin-right -20px
+		margin-bottom 29px
+		margin-left -20px
+		
+		@media $smPlus
+			margin-right -40px
+			margin-bottom 32px
+			margin-left -40px
+		
+		@media $mdPlus
+			margin-top 20px
+			margin-right 0
+			margin-left 0
+		
+		@media $lgPlus
+			margin-top -64px
+	
+	&_swiperArrow
+		position absolute
+		z-index 10
+		top -9px
+		bottom 0
+		margin auto
+		
+		@media $sm
+			top -26px
+		
+		@media $mdPlus
+			top auto
+			bottom 0
+		
+		&-prev
+			@media $sm
+				left 35px
+		
+		&-next
+			right 0
+			
+			@media $sm
+				right 36px
+			
+			@media $mdPlus
+				right auto
+				left 49px
+	
+	&_text
+		margin-top 34px
+		margin-bottom 27px
+		text-transform uppercase
+		
+		& > p
+			margin-bottom 10px
+			font-size 16px
+			line-height 1.5
+			
+			@media $smPlus
+				margin-bottom 24px
+		
+		@media $smPlus
+			margin-top 32px
+			margin-bottom 29px
+		
+		@media $mdPlus
+			margin-top 37px
+	
+	&_mobileApp
+		margin-top 27px
+	
+	&-pageBathroom
+		.BasePage_text
+			@media $lgPlus
+				padding-right 80px
+	
+	&-pageFitness
+		.BasePage_subtitle
+			@media $xs
+				padding-right 23px
+			
+			@media $sm
+				padding-right 110px
+		
+		.BasePage_text
+			@media $lgPlus
+				padding-right 60px
+	
+	&-pageChildren
+		.BasePage_subtitle
+			padding-right 7px
+			
+			@media $lgPlus
+				padding-right 79px
+		
+		.BasePage_text
+			@media $lgPlus
+				padding-right 90px
+	
+	&-pageCrossfit
+		.BasePage_subtitle
+			@media $lgPlus
+				padding-right 45px
+		
+		.BasePage_caption
+			@media $lgPlus
+				margin-top -15px
+	
+	&-pageStudio
+		.BasePage_mobileApp
+			@media $lgPlus
+				margin-top 47px

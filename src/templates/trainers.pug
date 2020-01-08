@@ -1,0 +1,162 @@
+extends layout
+block vars
+	- var title = "Тренеры";
+	- var wrapperModifiers = "Wrapper-trainersPage";
+	- var mainContentModifiers = "MainContent-trainersPage";
+	-
+		var trainers = [
+			{
+				fileName: 'chumanov_georgiy.jpg',
+				name: 'Георгий Чуманов',
+				instagramLogin: '321goga',
+				text: "<p>Действующий CrossFit CF L2 тренер и атлет категории мастер.</p><p>Самый главный начальник всех тренеров.</p><p>Глубокое и зрелое пониманием фитнеса. Решение всех проблем, кроме бессмертия. Дружелюбие, доступность, внимание к деталям.</p>",
+				prevTrainerName: 'Алик Наврузов',
+				nextTrainerName: 'Анжелика Пиляева',
+			},
+			{
+				fileName: 'pilyaeva_anzhelika.jpg',
+				name: 'Анжелика Пиляева',
+				instagramLogin: 'Angilika',
+				text: "<p>Наш «Солдат Джейн»: Мастер спорта по борьбе, Вице Чемпионка Мира UAEJJF 2018 и чемпионка Европы по грэпплингу IBJJF, умная и красивая девушка – топ-атлет мирового уровня в одной из сложнейших «не женских» дисциплин.</p><p>Единоборства: техническая и функциональная подготовка юных и взрослых забияк.</p>",
+				prevTrainerName: 'Георгий Чуманов',
+				nextTrainerName: 'Илья Блинников',
+			},
+			{
+				fileName: 'blinnikov_ilya.jpg',
+				name: 'Илья Блинников',
+				instagramLogin: 'ilyablinnikov',
+				text: "<p>Наш Рокки. Действующий профессиональный боксер мирового уровня с рекордом 6:0. Тренировки по боксу высочайшего уровня, функциональная подготовка для взрослых и детей. Все многообразие боксерской техники, кроме техник падения)</p>",
+				prevTrainerName: 'Анжелика Пиляева',
+				nextTrainerName: 'Сергей Капков',
+			},
+			{
+				fileName: 'kapkov_sergey.jpg',
+				name: 'Сергей Капков',
+				instagramLogin: 'mrkap25',
+				text:	"<p>Действующий Crossfit атлет и тренер CF L1</p><p>Комплексные программы фитнеса и питания, коррекция фигуры, <br>работа с будущими мамами, первые фитнес тренировки еще не родившихся детей. <br>Восстановление формы после травм и перерывов. Подготовка к соревнованиям. Вдумчивость и ответственность. Взрослые и дети.</p>",
+				prevTrainerName: 'Илья Блинников',
+				nextTrainerName: 'Анастасия Байдак',
+			},
+			{
+				fileName: 'nastya_baidak.jpg',
+				name: 'Анастасия Байдак',
+				instagramLogin: 'nastyapoohpooh',
+				text: "<p>Действующий Crossfit атлет и тренер CF L1</p><p>Победа отличницы над спорсменкой в детстве. Высшее экономическое образование и успешная карьера в банковском сектора. Реванш зрелого атлета и тренера над преуспевающим банкиром.</p><p>Глубокое понимание мотивов людей, дисциплина, системность, ответственность.</p><p>Разработка и сопровождение долгосрочных программ трансформации: питание, здоровье, коррекция фигуры, восстановление.</p>",
+				prevTrainerName: 'Сергей Капков',
+				nextTrainerName: 'Николайчев Сергей',
+			},
+			{
+				fileName: 'nikolaychev_sergey.JPG',
+				name: 'Николайчев Сергей',
+				instagramLogin: 'sergey_nikolaychev',
+				text:	"<p>Мастер спорта по спортивной гимнастике, Призёр чемпионатов Украины по гимнастике и бодибилдингу. Серийный убийца жировой ткани тел подопечных.</p><p>Коррекция фигуры, ОФП, восстановление формы, гимнастика для взрослых и юных атлетов.</p>",
+				prevTrainerName: 'Анастасия Байдак',
+				nextTrainerName: 'Игорь Ручкин',
+			},
+			{
+				fileName: 'ruchkin_igor.jpg',
+				name: 'Игорь Ручкин',
+				instagramLogin: 'igerruch',
+				text: "<p>Мастер спорта международного класса СССР по биатлону.</p><p>Зрелый и опытный тренер.</p><p>Плавный вход в фитнес, восстановление после травм и перерывов для хороших атлетов в плохой форме.</p>",
+				prevTrainerName: 'Николайчев Сергей',
+				nextTrainerName: 'Мария Светова',
+			},
+			{
+				fileName: 'svetova_mariya.jpg',
+				name: 'Мария Светова',
+				instagramLogin: 'marysvetova',
+				text: "<p>Настоящая балерина без балетных заморочек. Шпагат с болью и удовольствием для закостеневших скептиков.</p><p>Танцы, фитнес, растяжка для здоровья и настроения.</p>",
+				prevTrainerName: 'Игорь Ручкин',
+				nextTrainerName: 'Виктор Бибов',
+			},
+			{
+				fileName: 'bibov_viktor.jpg',
+				name: 'Виктор Бибов',
+				instagramLogin: 'biboff_victor',
+				text: "<p>Плавание и ОФП для самых маленьких. Исключительное дружелюбие, забота и ответственность.</p>",
+				prevTrainerName: 'Мария Светова',
+				nextTrainerName: 'Анастасия Акимова',
+			},
+			{
+				fileName: 'akimova_anastasia.JPG',
+				name: 'Анастасия Акимова',
+				instagramLogin: 'kocherga82',
+				text:	"<p>Мастер спорта по плаванию, Чемпионка Украины.</p><p>Трансформация наземных в водоплавающих.</p><p>Техника - все стили, очень красиво, плавание и ОФП для взрослых и детей, подготовка к соревнованиям</p>",
+				prevTrainerName: 'Виктор Бибов',
+				nextTrainerName: 'Комкова Олеся',
+			},
+			{
+				fileName: 'komkova_olesya.jpg',
+				name: 'Комкова Олеся',
+				instagramLogin: '',
+				text:	"<p>Магистр физической культуры РГУФКСМиТ, инструктор групповых программ</p>",
+				prevTrainerName: 'Анастасия Акимова',
+				nextTrainerName: 'Чуманова Наталья',
+			},
+			{
+				fileName: 'chumanova_natalia.jpg',
+				name: 'Чуманова Наталья',
+				instagramLogin: '',
+				text: "<p>Фитнес директор, Crossfit Level2 Trainer, Crossfit Kids Trainer, образование - Московский Педагогический Государственный Университет</p>",
+				prevTrainerName: 'Комкова Олеся',
+				nextTrainerName: 'Ягниш Ксения',
+			},
+			{
+				fileName: 'yagnish_kseniya.jpg',
+				name: 'Ягниш Ксения',
+				instagramLogin: '',
+				text:	"<p>Персональный тренер. Инструктор групповых программ. Образование - Московская государственная академия ФК.</p>",
+				prevTrainerName: 'Чуманова Наталья',
+				nextTrainerName: 'Алик Наврузов',
+			},
+			{
+				fileName: 'navruzov_alik.jpg',
+				name: 'Алик Наврузов',
+				instagramLogin: 'alik_red_beard',
+				text: "<p>Чемпион России по историческому фехтованию, CF L1</p><p>Похожий на викинга рыжебородый весельчак, любимец всех юных атлетов. <br>CrossFit, работа над мышечной массой, ОФП для взрослых и детей без скуки и однообразия.</p>",
+				prevTrainerName: 'Ягниш Ксения',
+				nextTrainerName: 'Георгий Чуманов',
+			}
+		];
+
+	mixin addTrainer(trainer)
+		.Trainer
+			.Columns.Trainer_columns
+				.Columns_col.Trainer_col
+					.Trainer_photo
+						.ProportionalImage.ProportionalImage-trainersPage(style="background-image: url('img/" + trainer.fileName + "')")
+				.Columns_col.Trainer_col.Trainer_col-right
+					.Trainer_name #{trainer.name}
+					if trainer.instagramLogin
+						.Instagram.Trainer_instagram
+							a(href="https://www.instagram.com/" + trainer.instagramLogin + "/", target="_blank").Instagram_link
+								span.Instagram_icon
+									include includes/svg/SvgIco/instagram
+								span.Instagram_login #{trainer.instagramLogin}
+					.Trainer_text!= trainer.text
+					.Trainer_arrows
+						button.Trainer_swiperArrow.Trainer_swiperArrow-prev
+							span.Trainer_swiperArrowIcon
+								include includes/svg/SvgIco/slider_prev
+							span.Trainer_swiperTrainerName.hidden-xs #{trainer.prevTrainerName}
+						span.Trainer_swiperTrainerName.Trainer_swiperNext.hidden-sm.hidden-mdPlus #{trainer.nextTrainerName}
+						button.Trainer_swiperArrow.Trainer_swiperArrow-next
+							span.Trainer_swiperTrainerName.hidden-xs #{trainer.nextTrainerName}
+							span.Trainer_swiperArrowIcon
+								include includes/svg/SvgIco/slider_next
+block content
+	.Trainers
+		.PageBg.PageBg-trainersPage.Trainers_pageBg
+		.Container
+			h1.Heading1.Trainers_title #{title}
+			.Explanation.Trainers_explanation.Explanation-trainersPage.
+				Наши тренеры - бывшие и действующие спортсмены, объединенные целью помочь каждому члену #[span.Red Icebox Fitness] стать лучшей версией себя. #[br.hidden-mdPlus]Нас много, мы разные, и мы действительно любим свою работу. #[br]Вот некоторые из нас:
+			.Trainers_swiper
+				.swiper-container.Swiper.Swiper-trainers
+					.swiper-wrapper.Swiper_wrapper
+						each trainer in trainers
+							.swiper-slide.Swiper_slide
+								+addTrainer(trainer)
+
+block page_bottom
+	script(src="/js/trainers.js")

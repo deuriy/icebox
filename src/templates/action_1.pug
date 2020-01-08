@@ -1,0 +1,34 @@
+extends layout
+block vars
+	- var title = "Action page";
+	- var wrapperModifiers = "Wrapper-actionPage";
+block content
+	.ActionBlock
+		.Container
+			.Columns
+				.Columns_col.ActionBlock_col-left
+					a(href="/").GoBack.TitleSep.ActionBlock_title Вернуться на главную
+					h2.Subtitle.ActionBlock_subtitle.
+						Персональная тренировка #[br.hidden-sm] от 2000 рублей
+					.ActionBlock_img.ActionBlock_img-smMinus
+						.ProportionalImage.ProportionalImage-actionBlock(style="background-image: url('img/action_1.png')")
+					.ActionBlock_content
+						ul.List.List-actionBlock.ActionBlock_list
+							li.List_item Самый эффективный способ тренировки — персональная тренировка с тренером!
+							li.List_item Тренер составляет индивидуальный план тренировок
+							li.List_item Следит за правильной и безопасной техникой выполнения упражнений
+							li.List_item Все упражнения подобраны специально для Вас.
+						ul.List.List-actionBlock.ActionBlock_list
+							li.List_item
+								span.Bolder Учитываются:
+							li.List_item -Ваши цели
+							li.List_item -Возможные ограничения связанные с прошлыми травмами или состоянием здоровья
+							li.List_item -Ваше нынешнее физическое состояние
+							li.List_item -Ваше самочувствие и реакция органинзма на каждую тренировку
+							li.List_item -Тренер консультирует по особенностям питания для быстрого и устойчивого результата
+						p.
+							Продолжительность занятия 60 #[br.hidden-smPlus]минут.
+						a(href="#").Link Смотреть следующую акцию
+				.Columns_col
+					.ActionBlock_img.ActionBlock_img-mdPlus
+						.ProportionalImage.ProportionalImage-actionBlock(style="background-image: url('img/action_1_desktop.png')")

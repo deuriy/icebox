@@ -1,0 +1,44 @@
+extends layout
+block vars
+	- var title = "О нас";
+	- var wrapperModifiers = "Wrapper-pageAbout";
+	- var mainContentModifiers = "MainContent-pageAbout";
+block content
+	.About
+		.PageBg.About_pageBg
+		.Container
+			h1.Heading1.About_title О нас
+			.Explanation.Explanation-pageAbout.About_explanation.
+				В #[span.Red IceBox Fitness] мы помогаем людям любого возраста стать лучшей версией себя в атмосфере дружеского общения, юмора и взаимной поддержки.
+			.About_swiper
+				.swiper-container.Swiper.Swiper-pageAbout
+					.swiper-wrapper.Swiper_wrapper
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness_3.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness_2.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness_4.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/bathroom.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/crossfit.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness_4.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/fitness_2.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/bathroom.jpg')")
+						.swiper-slide.Swiper_slide
+							.ProportionalImage.ProportionalImage-pageAbout(style="background-image: url('img/crossfit.jpg')")
+					.Swiper_pagination.hidden-mdPlus
+					.SwiperArrow.SwiperArrow-pageAbout.SwiperArrow-prev.About_swiperArrow.About_swiperArrow-prev
+						include includes/svg/SvgIco/slider_prev
+					.SwiperArrow.SwiperArrow-pageAbout.SwiperArrow-next.About_swiperArrow.About_swiperArrow-next
+						include includes/svg/SvgIco/slider_next
+			.About_more.hidden-xs.hidden-sm
+				a(href="#").About_moreLink Показать еще
+block page_bottom
+	script(src="/js/about.js")

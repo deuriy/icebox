@@ -1,0 +1,57 @@
+.ActionBlock
+	&_col
+		&-left
+			@media $mdPlus
+				padding-right 50px
+				
+			@media $lgPlus
+				padding-right 100px
+	
+	&_title
+		margin-bottom 7px
+		
+		@media $smPlus
+			margin-bottom 11px
+				
+	&_subtitle
+		margin-bottom 34px
+		
+		@media $smPlus
+			margin-bottom 22px
+		
+		@media $mdPlus
+			margin-bottom 35px
+	
+	&_img
+		margin-bottom 22px
+		
+		@media $smPlus
+			margin-bottom 32px
+		
+		&-smMinus
+			@media $mdPlus
+				display none
+		
+		&-mdPlus			
+			@media $smMinus
+				display none
+			
+			@media $lgPlus
+				margin-top -64px
+	
+	&_list
+		margin-bottom 44px
+		
+		@media $smPlus
+			margin-bottom 24px
+	
+	&_content
+		& > p
+			margin-bottom 35px
+			letter-spacing 0.15px
+			
+			@media $smPlus
+				margin-bottom 43px
+			
+			@media $mdPlus
+				margin-bottom 31px

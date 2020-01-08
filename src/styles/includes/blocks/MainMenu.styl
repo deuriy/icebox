@@ -1,0 +1,86 @@
+.MainMenu
+	&_item
+		position relative
+		border-bottom 1px solid $gray
+		
+		&:before
+			content ""
+			position absolute
+			top 0
+			left -20px
+			width 0
+			height 100%
+			background-color $red
+			transition .5s ease-in-out
+			
+			@media $smPlus
+				left -40px
+		
+		&-active
+			&:before
+				width calc(100% + 40px)
+				
+				@media $smPlus
+					width calc(100% + 80px)
+		
+		&:hover, &:focus
+			&:before
+				@media $mdPlus
+					width calc(100% + 80px)
+		
+		&:first-child
+			border-top 1px solid $gray
+	
+	&_link
+		position relative
+		display block
+		margin-right -20px
+		margin-left -20px
+		padding 11px 20px
+		font-weight 500
+		font-size 13px
+		line-height normal
+		text-transform uppercase
+		
+		@media $smPlus
+			margin-right -40px
+			margin-left -40px
+			padding-right 40px
+			padding-left 40px
+	
+	&-desktop
+		@media $smMinus
+			display none
+		
+		.MainMenu_menu
+			display flex
+		
+		.MainMenu_item
+			border-bottom none
+			
+			&:first-child
+				border-top none
+			
+			&:not(:last-child)
+				margin-right 28.6px
+				
+			&:before
+				@media $smPlus
+					left -3px
+				
+			&:hover, &:focus, &-active
+				&:before					
+					@media $smPlus
+						width calc(100% + 6px)
+		
+		.MainMenu_link
+			padding-top 0
+			padding-bottom 0
+			line-height 18px
+			letter-spacing 0.2px
+			
+			@media $smPlus
+				margin-right -3px
+				margin-left -3px
+				padding-right 3px
+				padding-left 3px

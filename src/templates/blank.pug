@@ -1,0 +1,186 @@
+extends layout
+block vars
+	- var title = "Пустая страница";
+	- var wrapperModifier = "MainContent-emptyPage";
+block content
+	.Container
+//- h1.Heading1
+//-  | Тренеры
+//- .Explanation
+//-  | Наши тренеры - бывшие и действующие спортсмены, объединенные целью помочь каждому члену IceBox стать лучшей версией себя.
+//-  br
+//-  | Нас много, мы разные, и мы действительно любим свою работу.
+//-  br
+//-  | Вот некоторые из нас:
+//- h1.Heading1
+//-  | О нас
+//- .Explanation
+//-  | В 
+//-  span.Red IceBox Fitness 
+//-  | мы помогаем людям любого возраста стать лучшей версией себя в атмосфере дружеского общения, юмора и взаимной поддержки. 
+//- a(href="/").GoBack.TitleSep Вернуться на главную
+//- h2.Subtitle
+//-  | Персональная тренировка 
+//-  br
+//-  | от 2000 рублей
+//- h1.PageTitle.TitleSep Детям
+//- h2.Subtitle
+//-  | Индивидуальные занятия
+//-  br
+//-  | и классы для юных атлетов 
+//-  br
+//-  | 5-15 лет:
+//- ul.List
+//-  li.List_item - Плавание
+//-  li.List_item - Танцы
+//-  li.List_item - Crossfit Kids
+//-  li.List_item - Единоборства
+//- h1.PageTitle.TitleSep Про деньги
+//- .Subtitle
+//-  | Глупо переплачивать или платить за то что нам не нужно., У нас Вы платите только за то, чем будете пользоваться. Именно поэтому в 
+//-  span.Red IceBox Fitness:
+//- ul.List-small
+//-  li.List_item - Тарифы для разных графиков посещения.
+//-  li.List_item - Групповые классы без членства по цене 550-700 рублей за занятие в Studio и Crossfit;
+//-  li.List_item - Регулярные акции и скидки на членство;
+//-  li.List_item - Персоналки от 1 до 3 человек по цене  2,500 за занятие (2,000 в блоке из 8);
+//-  li.List_item - 5 полноценных занятий IceBox Fitness Академия Часть 1, включенных в членство для новых членов;
+//-  li.List_item - Детский фитнес без покупки членства родителями;
+//-  li.List_item - Беспроблемный возврат в случае отмены членства;
+
+//- .MainContent_columns
+//-     .MainContent_left
+//-         h1.PageTitle.TitleSep Детям
+//-         h2.Subtitle.
+//-             Индивидуальные занятия #[br]и классы для юных атлетов #[br]5-15 лет:
+//-         ul.List
+//-             li.List_item - Плавание
+//-             li.List_item - Танцы
+//-             li.List_item - Crossfit Kids
+//-             li.List_item - Единоборства
+//-     .MainContent_right
+//-         .swiper-container.Swiper.Swiper-noGuttersSm.Swiper-default
+//-             .swiper-wrapper.Swiper_wrapper
+//-                 .swiper-slide.Swiper_slide
+//-                     .ProportionalImage(style="background-image: url('img/slide1@2x.png')")
+//-                 .swiper-slide.Swiper_slide
+//-                     .ProportionalImage(style="background-image: url('img/slide1@2x.png')")
+//-                 .swiper-slide.Swiper_slide
+//-                     .ProportionalImage(style="background-image: url('img/slide1@2x.png')")
+//-                 .swiper-slide.Swiper_slide
+//-                     .ProportionalImage(style="background-image: url('img/slide1@2x.png')")
+//-                 .swiper-slide.Swiper_slide
+//-                     .ProportionalImage(style="background-image: url('img/slide1@2x.png')")
+//-             .Swiper_pagination
+//-             .Swiper_prev
+//-                 include includes/svg/SvgIco/slider_prev
+//-             .Swiper_next
+//-                 include includes/svg/SvgIco/slider_next
+//-         p.
+//-             Членство родителей приветствуется, но не является обязательным для занятий их детей.
+
+//- h1.Heading1.Heading1-large.
+//- 	icebox #[br]Fitness
+//- .Explanation.
+//- 	В #[span.Red IceBox Fitness] мы помогаем людям любого возраста СТАТЬ ЛУЧШЕЙ ВЕРСИЕЙ СЕБЯ в атмосфере дружеского общения, юмора и взаимной поддержки. Весь спектр занятий от тренировок в свое удовольствие до подготовки к соревнованиям.
+//- .InfoBlocks
+//- 	h2.Heading2.InfoBlocks_title Акции
+//- 	.swiper-container.Swiper.Swiper-infoBlock
+//- 		.swiper-wrapper.Swiper_wrapper
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Делайте подарки себе и своим близким!")
+//- 							include includes/svg/SvgIco/gifts
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Делайте подарки себе и своим близким!").
+//- 							Делайте подарки себе #[br]и своим близким!
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Персональная тренировка от 2 000 р.")
+//- 							include includes/svg/SvgIco/personal_training
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Персональная тренировка от 2 000 р.").
+//- 							Персональная #[br]тренировка от 2 000 р.
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Бесплатные занятия в студии icebox fitness.")
+//- 							include includes/svg/SvgIco/free_trainings
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Бесплатные занятия в студии icebox fitness.").
+//- 							Бесплатные занятия #[br]в студии icebox fitness.
+//- 		.Swiper_prev
+//- 			include includes/svg/SvgIco/slider_prev
+//- 		.Swiper_next
+//- 			include includes/svg/SvgIco/slider_next
+//- .swiper-container.Swiper.Swiper-noGuttersSm.Swiper-default.Swiper-arrowsMiddleDesktop.Swiper-fullWidthDesktop.Swiper-paginationCenterDesktop.Swiper-frontPage
+//- 	.swiper-wrapper.Swiper_wrapper
+//- 		.swiper-slide.Swiper_slide
+//- 			img(src="img/fitness_3.jpg", alt="")
+//- 		.swiper-slide.Swiper_slide
+//- 			img(src="img/fitness.jpg", alt="")
+//- 		.swiper-slide.Swiper_slide
+//- 			img(src="img/fitness_4.jpg", alt="")
+//- 		.swiper-slide.Swiper_slide
+//- 			img(src="img/bathroom.jpg", alt="")
+//- 		.swiper-slide.Swiper_slide
+//- 			img(src="img/crossfit.jpg", alt="")
+//- 	.Swiper_pagination
+//- 	.Swiper_prev
+//- 		include includes/svg/SvgIco/slider_prev
+//- 	.Swiper_next
+//- 		include includes/svg/SvgIco/slider_next
+//- .InfoBlocks.InfoBlocks-trainings
+//- 	h2.Heading2.InfoBlocks_title Занятия
+//- 	.swiper-container.Swiper.Swiper-infoBlock.Swiper-infoBlockLarge
+//- 		.swiper-wrapper.Swiper_wrapper
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock.InfoBlock-large
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Бассейн")
+//- 							include includes/svg/SvgIco/bathroom
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Бассейн").
+//- 							Бассейн
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock.InfoBlock-large
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Studio")
+//- 							include includes/svg/SvgIco/studio
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Studio").
+//- 							Studio
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock.InfoBlock-large
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Фитнес")
+//- 							include includes/svg/SvgIco/fitness
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Фитнес").
+//- 							Фитнес
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock.InfoBlock-large
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="CrossFit")
+//- 							include includes/svg/SvgIco/crossfit
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="CrossFit").
+//- 							CrossFit
+//- 			.swiper-slide.Swiper_slide
+//- 				.InfoBlock.InfoBlock-large
+//- 					.InfoBlock_img
+//- 						a(href="#", target="_blank", title="Детям")
+//- 							include includes/svg/SvgIco/children
+//- 					h3.InfoBlock_caption
+//- 						a(href="#", target="_blank", title="Детям").
+//- 							Детям
+//- 		.Swiper_prev
+//- 			include includes/svg/SvgIco/slider_prev
+//- 		.Swiper_next
+//- 			include includes/svg/SvgIco/slider_next
+//- include includes/blocks/Form-passRequest
+//- include includes/blocks/TrialLessonSection
+//- block page_bottom
+//- script(src="/js/script_for_this_page")

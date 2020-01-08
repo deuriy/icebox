@@ -1,0 +1,26 @@
+.BtnDefault
+	display inline-block
+	padding 14px 27px 15px
+	border 2px solid transparent
+	outline none
+	background $red2
+	color $white
+	font-weight 500
+	font-size 13px
+	text-transform uppercase
+	transition .4s ease-in-out
+	
+	&:hover
+		background-color $red2Hover
+	
+	@media $mdPlus
+		border-color $red2
+		background-color transparent
+		letter-spacing 0.2px
+		background-image: linear-gradient(to right, $red2 50%, transparent 50%)
+		background-size: calc(200% + 4px) 100%
+		background-position: right bottom
+		
+		&:hover
+			background-color transparent
+			background-position: left bottom

@@ -1,0 +1,16 @@
+form(action="/ajax/form-response.json").Form.Form-center.Form-trialLesson
+	h3.Heading3.Form_title.
+		Записаться #[br.hidden-smPlus]на пробное занятие
+	.Form_description.
+		Свободное посещение тренажерного зала, бассейна, студии танцев, боевых искусств или йоги в рамках бесплатного ознакомительного тура.
+	.Form_wrapper
+		.Form_items
+			.Form_item
+				input(type="text", name="fio", placeholder="ФИО*", required).FormText.Form_textField
+			.Form_item
+				input(type="tel", name="phone", placeholder="Телефон*", required).FormText.Form_textField
+			.Form_item
+				input(type="email", name="email", placeholder="Электронная почта").FormText.Form_textField
+		.Form_actions
+			button(type="submit").BtnDefault.Form_submit
+				span.BtnDefault_text Записаться

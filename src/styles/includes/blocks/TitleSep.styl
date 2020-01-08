@@ -1,0 +1,23 @@
+.TitleSep
+	position relative
+	padding-bottom 14px
+	
+	&:after
+		content ""
+		position absolute
+		bottom 0
+		left 0
+		width 30px
+		height 3px
+		background $red
+		
+		@media $smPlus
+			bottom -1px
+		
+		@media $mdPlus
+			bottom -2px
+	
+	&-top
+		&:after
+			top -13px
+			bottom auto

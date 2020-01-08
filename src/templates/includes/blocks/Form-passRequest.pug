@@ -1,0 +1,12 @@
+form(action="/ajax/form-response.json").Form.NoGuttersMobile.Form-center.Form-passRequest
+	h3.Heading3.Form_title Заявка на пропуск
+	.Form_wrapper
+		.Form_items
+			.Form_item
+				input(type="text", name="fio", placeholder="ФИО*", required).FormText.Form_textField
+			.Form_item
+				input(type="email", name="email", placeholder="Электронная почта*", required).FormText.Form_textField
+			.Form_item
+				input(type="text", name="car_number", placeholder="Номер машины*", required).FormText.Form_textField
+		.Form_actions
+			button(type="submit").BtnDefault.Form_submit Отправить

@@ -1,0 +1,141 @@
+.Swiper	
+	@media $mdPlus
+		width 615px
+		padding-bottom 6px
+		
+	&_pagination
+		display flex
+		justify-content center
+		align-items center
+		height 8px
+		margin-top 20px
+		
+		@media $mdPlus
+			justify-content flex-end
+			margin-top 10px
+			margin-right -5px
+	
+	&_paginationItem
+		width 6px
+		height 6px
+		margin 0 5px
+		background #585858
+		cursor pointer
+		transition .3s ease-in-out
+		
+		&:last-child
+			@media $mdPlus
+				margin-right 0
+		
+		&-active, &:hover
+			background $red
+		
+		&-active
+			width 8px
+			height 100%
+	
+	&-infoBlock
+		@media $mdPlus
+			width 100%
+		
+		.Swiper_wrapper
+			@media $smPlus
+				flex-wrap wrap
+			
+			@media $mdPlus
+				justify-content space-between
+				
+				&:after
+					content ""
+					flex-basis 31.25%
+		
+		.Swiper_slide
+			@media $sm
+				width 48.1%
+				margin-bottom 6.78%
+				
+				&:nth-child(even)
+					margin-left 3.8%
+			
+			@media $mdPlus
+				width 31.5%
+				margin-bottom 4.1%
+		
+		.Swiper_prev, .Swiper_next
+			position absolute
+			z-index 10
+			top -57px
+			bottom 0
+			margin auto
+			opacity 0.7
+			
+			@media $smPlus
+				display none
+		
+		.Swiper_prev
+			left 0
+		
+		.Swiper_next
+			right 0
+	
+	&-paginationCenterDesktop
+		@media $mdPlus
+			.Swiper_pagination
+				justify-content center
+				margin-top 26px
+			
+			.Swiper_paginationItem				
+				&:last-child
+					margin-right 6px
+	
+	&-fullWidthDesktop
+		@media $mdPlus
+			width 100%
+	
+	&-infoBlockLarge
+		.Swiper_slide
+			@media $sm
+				margin-bottom 7.7%
+			
+		.Swiper_prev, .Swiper_next
+			top -45px
+	
+	&-basePage
+		@media $mdPlus
+			width 500px
+			
+		@media $lgPlus
+			width 604px
+			padding-bottom 8px
+	
+	&-trainers, &-pageAbout
+		@media $mdPlus
+			width 100%
+	
+	&-pageAbout
+		.Swiper_wrapper
+			@media $mdPlus
+				flex-wrap wrap
+				justify-content space-between
+			
+		.Swiper_slide
+			@media $mdPlus
+				width 48.59%
+			
+				&:nth-child(n+7)
+					display none
+				
+				&:not(:nth-last-child(-n+2))
+					margin-bottom 2.73%
+				
+				&:nth-child(5), &:nth-child(6)
+					margin-bottom 0
+	
+	&-pageAboutExpanded
+		.Swiper_slide
+			@media $mdPlus
+				&:nth-child(n+7)
+					display block
+				
+				&:nth-child(5), &:nth-child(6)
+					margin-bottom 2.73%

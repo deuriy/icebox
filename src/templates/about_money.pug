@@ -1,0 +1,97 @@
+extends layout
+block vars
+	- var title = "Про деньги";
+	- var wrapperModifiers = "Wrapper-pageAboutMoney";
+	- var mainContentModifiers = "MainContent-pageAboutMoney";
+	-
+		var tariffsArr = [
+			{ name: "365 Plus 2",	price: "69 900", description: "365 дней + Crossfit и Studio" },
+			{	name: "365 Plus 1", price: "59 900", description: "365 дней + Crossfit или Studio на выбор"	},
+			{	name: "365", price: "48 000", description: "365 дней"	},
+			{	name: "0:2", price: "24 000",	description: "Только выходные дни" },
+			{	name: "5:0", price: "43 200",	description: "Только рабочие дни"	},
+			{	name: "5:0 / 7-17", price: "33 600", description: "По рабочим до 17:00"	},
+			{	name: "5:0 / 10-17", price: "28 800", description: "По рабочим с 10:00 до 17:00" },
+			{	name: "2+2", price: "38 600", description: "Вт,Чт, и выходные" },
+			{	name: "Crossfit365", price: "36 000", description: "365 дней только Crossfit" },
+			{	name: "365 Kids",	price: "12 000", description: "Плавание с родителями" },
+			{	name: "365 Kids Plus", price: "38 000",	description: "Плавание с родителями, детские классы" },
+		];
+
+		var tariffsShortArr = [
+			{ description: "Персоналка для взрослых <br class=\"hidden-smPlus\">и детей 50 мин", price: "2 500"	},
+			{	description: "В блоке из 8", price: "2 000" },
+			{	description: "Персоналка в бассейне <br class=\"hidden-smPlus\">для детей 30 мин", price: "1 500" },
+			{	description: "В блоке из 8", price: "1 100" }
+		];
+
+		var tariffsShortArr2 = [
+			{	description: "1 занятие",	price: "700" },
+			{	description: "3 занятия",	price: "1 950" },
+			{	description: "8 занятий",	price: "4 800" },
+			{	description: "12 занятий", price: "6 600" },
+			{	description: "Персоналка для взрослых <br>и детей без членства", price: "3 000"	}
+		];
+
+	mixin addTariff(tariff)
+		.Tariff.Tariff-highlighted
+			.Tariff_name-and-price
+				.Tariff_name #{tariff.name}
+				.Tariff_price #{tariff.price}
+			.Tariff_description!= tariff.description
+
+	mixin addTariffShort(tariff)
+		.Tariff.Tariff-short
+			.Tariff_description!= tariff.description
+			.Tariff_price #{tariff.price}
+
+block content
+	.AboutMoney
+		.Container
+			h1.PageTitle.TitleSep.AboutMoney_title #{title}
+			.Subtitle.Subtitle-pageAboutMoney.AboutMoney_subtitle.
+				Глупо переплачивать или платить #[br.hidden-xs]за то что нам не нужно. #[br.hidden-xs]У нас Вы платите только за то, чем #[br.hidden-xs]будете пользоваться. #[br.hidden-xs]Именно поэтому в #[span.Red IceBox Fitness:]
+			ul.List.List-pageAboutMoney.AboutMoney_list
+				li.List_item - Тарифы для разных графиков посещения;
+				li.List_item - Групповые классы без членства по цене 550-700 рублей за занятие в #[a.Link.Link-aboutMoney(href="/studio.html", target="_blank") Studio] и #[a.Link.Link-aboutMoney(href="/crossfit.html", target="_blank") Crossfit];
+				Li.List_item - Регулярные акции и скидки на членство;
+				Li.List_item - Персоналки от 1 до 3 человек по цене &nbsp;2,500 за занятие (2,000 в блоке из 8);
+				Li.List_item - 5 полноценных занятий IceBox Fitness Академия Часть 1, включенных в членство для новых членов;
+				Li.List_item - Детский фитнес без покупки членства родителями;
+				Li.List_item - Беспроблемный возврат в случае отмены членства;
+			.TariffsSection.AboutMoney_tariffsSection
+				h2.Heading2.TariffsSection_title Тарифы
+				.TariffsSection_text Длительность посещений (месяцев)
+				.Timeline.TariffsSection_timeline
+					.Timeline_list
+						.Timeline_item(data-coefficient="0.2")
+							a(href="#").Timeline_link.
+								#[span.Timeline_circle] 1
+						.Timeline_item(data-coefficient="0.5")
+							a(href="#").Timeline_link.
+								#[span.Timeline_circle] 3
+						.Timeline_item(data-coefficient="0.7")
+							a(href="#").Timeline_link.
+								#[span.Timeline_circle] 6
+						.Timeline_item.Timeline_item-current(data-coefficient="1")
+							a(href="#").Timeline_link.
+								#[span.Timeline_circle] 12
+					.Timeline_fillLine
+				.Tariffs.TariffsSection_basicTariffs
+					each tariff in tariffsArr
+						+addTariff(tariff)
+				.Tariffs.TariffsSection_membership
+					.Tariffs_title.
+						Членство в IceBox Fitness дает право самостоятельно заниматься #[br.hidden-xs]в клубе и бесплатно посещать все групповые занятия
+					each tariff in tariffsShortArr
+						+addTariffShort(tariff)
+				.Tariffs.Tariffs-groupLessons
+					.Tariffs_title.
+						Групповые занятия в Crossfit IceBox и Studio без членства
+					each tariff in tariffsShortArr2
+						+addTariffShort(tariff)
+					.Tariffs_note.
+						Первое посещение бесплатно. Предварительная регистрация #[br]в #[a.Link.Tariffs_link(href="#") мобильном приложении] обязательна.
+
+block page_bottom
+	script(src="/js/about_money.js")

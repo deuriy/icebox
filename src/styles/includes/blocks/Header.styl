@@ -1,0 +1,74 @@
+.Header
+	&_container
+		display flex
+		justify-content space-between
+		
+		@media $smMinus
+			align-items center
+			height 64px
+		
+		@media $mdPlus
+			align-items flex-start
+			padding-top 22px
+	
+	&_menuHamburger
+		position relative
+		z-index 11
+		
+		@media $mdPlus
+			display none
+	
+	&_mobileNavigation
+		display none
+	
+	&_logo
+		position relative
+		z-index 10
+		display inline-block
+		margin-top 9px
+		margin-left 9px
+		
+		@media $sm
+			margin-left 18px
+		
+		@media $mdPlus
+			// width 20.365%
+			width 200px
+			margin-top 0
+			margin-left 0
+		
+		@media $lgPlus
+			width 246px
+		
+	&_logoImg
+		width 58px
+		
+		@media $mdPlus
+			width 100%
+	
+	&_mainMenu
+		margin-top 23px
+		
+		@media $smMinus
+			display none
+	
+	&_call
+		position relative
+		z-index 10
+		margin-top 2px
+		
+		@media $mdPlus
+			display none
+	
+	&-fixed
+		position fixed
+		z-index 10
+		top 0
+		left 0
+		width 100%
+		height 64px
+		background $dark
+		transition top .2s ease-in-out
+	
+	&-fixedTop
+		top -64px

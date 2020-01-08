@@ -1,0 +1,104 @@
+.Trainer		
+	&_col
+		&-right
+			@media $mdPlus
+				max-width 425px
+				padding-top 130px
+				padding-left 50px
+			
+			@media $lgPlus
+				max-width 440px
+				padding-top 186px
+				padding-left 89px
+				
+	&_photo
+		margin-bottom 31px
+		
+		@media $smPlus
+			margin-bottom 39px
+	
+	&_name
+		margin-bottom 17px
+		font-weight 500
+		font-size 18px
+		text-transform uppercase
+		color $white
+		
+		@media $smPlus
+			margin-bottom 51px
+			font-size 30px
+	
+	&_instagram
+		margin-bottom 20px
+		
+		@media $smPlus
+			margin-bottom 53px
+	
+	&_text
+		// min-height 345px
+		margin-bottom 40px
+		
+		@media $smPlus
+			// min-height 170px
+			margin-bottom 51px
+		
+		@media $mdPlus
+			min-height 250px
+			margin-bottom 95px
+	
+		& > p
+			margin-bottom 10px
+			line-height normal
+			
+			@media $smPlus
+				margin-bottom 0
+				line-height 1.5
+	
+	&_arrows
+		display flex
+		justify-content space-between
+		align-items center
+		margin-right -6px
+		margin-left -6px
+		
+		@media $mdPlus
+			width 419px
+			margin-right 0
+			margin-left -8px
+	
+	&_swiperArrow
+		display inline-flex
+		align-items center
+		border none
+		outline none
+		background transparent
+		color $white
+		transition .3s ease-in-out
+		
+		&:hover
+			color $red
+		
+		&-prev
+			.Trainer_swiperTrainerName				
+				@media $smPlus
+					margin-left 22px
+		
+		&-next
+			.Trainer_swiperTrainerName
+				margin-right 19px
+	
+	&_swiperArrowIcon
+		display inline-flex
+	
+	&_swiperNext
+		cursor pointer
+		transition .3s ease-in-out
+		
+		&:hover
+			color $red
+	
+	&_swiperTrainerName
+		outline none
+		font-weight 500
+		font-size 15px
+		text-transform uppercase

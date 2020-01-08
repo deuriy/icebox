@@ -1,0 +1,77 @@
+.About
+	&_pageBg
+		margin-bottom 20px
+		
+		@media $smPlus
+			margin-bottom 1px
+		
+		@media $mdPlus
+			margin-top -159px
+			margin-bottom -26.8%
+		
+		@media $lgPlus
+			margin-top -203px
+		
+	&_title
+		margin-bottom 15px
+		
+		@media $mdPlus
+			position relative
+			z-index 1
+			margin-bottom 24px
+			text-align center
+	
+	&_explanation
+		margin-bottom 51px
+		
+		@media $mdPlus
+			position relative
+			margin-bottom 80px
+			z-index 1
+			text-align center
+	
+	&_swiper
+		@media $xs
+			margin-right -20px
+			margin-left -20px
+		
+		@media $sm
+			margin-right -40px
+			margin-left -40px
+		
+		@media $mdPlus
+			margin-bottom 44px
+	
+	&_swiperArrow
+		position absolute
+		z-index 10
+		top -9px
+		bottom 0
+		margin auto
+		
+		@media $smPlus
+			top -30px
+		
+		&-prev
+			left 0
+			
+			@media $smPlus
+				left 35px
+		
+		&-next
+			right 0
+			
+			@media $smPlus
+				right 35px
+	
+	&_more
+		text-align center
+	
+	&_moreLink
+		font-size 15px
+		text-transform uppercase
+		text-decoration underline
+		color $white
+		
+		&:hover
+			text-decoration none
